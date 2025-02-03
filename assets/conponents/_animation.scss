@@ -1,0 +1,202 @@
+/*** ANIMATION LOGO ***/
+@keyframes rotateGear {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes changeColor {
+    0%{
+        fill: #fff;
+    }
+    15%{
+        fill: #f00;
+    }
+    20%{
+        fill: #fff;
+    }
+    40%{
+        fill: #f00;
+    }
+    75%{
+        fill: #fff;
+    }
+    80%{
+        fill: #f00;
+    }
+    90%{
+        fill: #fff;
+    }
+    100%{
+        fill: #f00;
+    }
+}
+@keyframes translateXleft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes translateXright {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes draw-line {
+    from {
+        stroke-dashoffset: 900;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes glowEffect {
+    0% { filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5)); }
+    50% { filter: drop-shadow(0 0 15px rgba(255, 0, 0, 1)); }
+    100% { filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.5)); }
+}
+
+.scroll{
+    animation: scroll 1s ease-in-out infinite;
+}
+.animatedPath {
+    stroke-dasharray: 900; 
+    stroke-dashoffset: 900; 
+    animation: draw-line 5s linear forwards;}
+.whell-gear {
+    transform-origin: 873.5px 194.5px;
+    animation: rotateGear 5s ease-in-out infinite;
+}
+.whell-gear2 {
+    transform-origin: 941.5px 194.5px;
+    animation: rotateGear 5s ease-in-out infinite;
+}
+#demiCircleRed{
+    transform-origin: 1001px 569px;
+    animation: rotateGear 1.5s ease-in-out 3 forwards;
+    &:hover{
+        animation: rotateGear 1.5s ease-in-out forwards;
+    }
+}
+#demiCircleRed2{
+    transform-origin: 427px 720px;
+    animation: rotateGear 1.5s ease-in-out 3 forwards;
+    &:hover{
+        animation: rotateGear 1.5s ease-in-out forwards;
+    }
+}
+#demiCircleGreen{
+    transform-origin: 891px 568px;
+    animation: rotateGear 1.5s ease-in-out 3 forwards;
+    &:hover{
+        animation: rotateGear 1.5s ease-in-out forwards;
+    }
+}
+#demiCircleGreen2{
+    transform-origin: 334px 720px;
+    animation: rotateGear 1.5s ease-in-out 3 forwards;
+    &:hover{
+        animation: rotateGear 1.5s ease-in-out forwards;
+    }
+}
+#circle1 {
+    animation: translateXleft 0.5s ease-in-out forwards;
+}
+#circle3 {
+    animation: translateXleft .7s ease-in-out forwards;
+}
+#circle2 {
+    animation: translateXleft .9s ease-in-out forwards;
+}
+#circle1, #circle2, #circle3 {
+    animation: glowEffect 1.5s infinite alternate;
+}
+.rec1, .rec-text1{
+    animation: translateXleft 1.1s ease-in-out forwards;
+}
+.rec2, .rec-text2{
+    animation: translateXleft 1.3s ease-in-out forwards;
+}
+.rect-grey1{
+    animation: translateXleft .1s ease-in-out forwards;
+}
+.rect-grey2{
+    animation: translateXleft .2s ease-in-out forwards;
+}
+.rect-grey3{
+    animation: translateXleft .3s ease-in-out forwards;
+}
+.rect-grey4{
+    animation: translateXleft .4s ease-in-out forwards;
+}
+.rect-grey5{
+    animation: translateXleft .5s ease-in-out forwards;
+}
+.rect-grey6{
+    animation: translateXleft .6s ease-in-out forwards;
+}
+.circle-green{
+    animation: translateXright .7s ease-in-out forwards;
+}
+.led{
+    animation: changeColor 1.3s infinite alternate;
+}
+/*Animation*/
+//Animation Interesction obsever
+.anime {
+    opacity: 0;
+  }
+  .anime-left {
+    opacity: 0;
+    transform: translateX(-50vw);
+    @media screen and (max-width: $laptop) {
+      transform: translateX(0);
+        
+    }
+  }
+  .anime-right {
+    opacity: 0;
+    transform: translateX(50vw);
+    @media screen and (max-width: $laptop) {
+      transform: translateX(0);
+        
+    }
+  }
+  .anime-left-visible,
+  .anime-right-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .7s ease;
+  }

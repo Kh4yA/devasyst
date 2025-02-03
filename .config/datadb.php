@@ -1,9 +1,9 @@
 <?php
 
 return [
-    "user_name" => "devserhdevassist",
+    "user_name" => "devserhdevasyst",
     "password" =>"354gHGNB5hnDnl59uj34",
-    "host"=>"devserhdevassist.mysql.db",
-    "name"=>"devassist"
+    "host"=>"devserhdevasyst.mysql.db",
+    "name"=>"devserhdevasyst"
 ];
 

@@ -1,18 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        {% block stylesheets %}
-            <link rel="stylesheet" href="./public/css/style.css">
-        {% endblock %}
-
-    <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-{% block header %}{% endblock %}
-    {% block body %}{% endblock %}
-    <h1>Je suis sur la page d'acceuil de devAssist.fr</h1>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<!-- SEO -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="author" content="devasyst">
+		<meta name="robots" content="index, follow">
+		<meta name="revisit-after" content="7 days">
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="devasyst" />
+		<meta property="og:locale" content="fr_FR" />		
+		{% block meta %}{% endblock %}
+		<!-- Import des styles -->
+		{% block stylesheets %}
+			<link rel="stylesheet" href="/css/style.css">
+		{% endblock %}
+		<!-- import fichier javascript -->
+			<script type='module' src="/public/js/app.js" defer></script>
+		{% block scripts %}
+		{% endblock %}
+		<!-- Font awsome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/images/logo-transparent-png.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="57x57" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/images/logo-transparent-png.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/logo-transparent-png.png">
+		<link rel="icon" type="image/png" href="/images/logo-transparent-png.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/images/logo-transparent-png.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/logo-transparent-png.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/images/logo-transparent-png.png" sizes="16x16">
+		<title>
+			{% block title %}devasyst | Développement web et assistance informatique.
+			{% endblock %}
+		</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class='flex space-between item-center' id='header'>
+			<div class="logo">
+				<a href="/"><img src="/images/dev@syst_long.png" alt="Logo du site devassist avec devise Developpement et assistance informatique a votre service."></a>
+			</div>
+			<div class='header-nav'>
+				<nav>
+					<ul class='flex gap-20 item-center space-between'>
+						<li>
+							<a href="/">Acceuil</a>
+						</li>
+						<li>
+							<div class='flex item-center' id='prestation'>
+								<p>Nos prestations</p>
+								<p class=''>
+									<svg width="15" height="13" viewbox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.5 13L0.138784 0.25L14.8612 0.25L7.5 13Z" fill="black"/>
+									</svg>
+								</p>
+							</div>
+							<div class="menu-slide flex space-evenly hidden gap-20">
+								<div>
+									<p class='color-dev box center-text margin-bottom10px margin-auto'>Developpement</p>
+									<ul class='flex direction-column gap-5'>
+										<li>
+											<a href="/prestations/developpement/site-vitrine">
+												<b>Site vitrine</b>
+											</a>
+										</li>
+										<li>
+											<a href="/presatations/developpement/application-web">
+												<b>Application web</b>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div>
+									<p class='color-desk box center-text margin-bottom10px margin-auto'>Assistance informatique</p>
+									<ul class='flex direction-column gap-5'>
+										<li>
+											<a href="/prestations/assistance/reccuperation-de-donnees">
+												<b>Réccuperation de données</b>
+											</a>
+										</li>
+										<li>
+											<a href="/prestations/assistance/assistance-technique">
+												<b>Assistance technique</b>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="/l-entreprise">L'entreprise</a>
+						</li>
+					</ul>
+				</nav>
+							<div>
+				<a href="/contact" class='button btn-head-mobile'>Nous contacter</a>
+			</div>
+			</div>
+			<div>
+				<a href="/contact" class='button btn-head'>Nous contacter</a>
+			</div>
+			<div id="open-burger" class=' flex justify-center'>
+				<span class="burger"></span>
+			</div>
+		</header>
+		<!-- Main Corp du site-->
+		<main>
+			{% block body %}{% endblock %}
+		</main>
+		<!-- Footer -->
+		<footer class='m5p'>
+			<div class=" large-8 margin-auto">
+				<div class="flex direction-column gap-5">
+					<div>
+						<img src="/images/dev@syst_white.png" alt="Logo du site devassist avec devise Developpement et assistance informatique a votre service.">
+					</div>
+					<a href="#" class>contact@devAsyst.fr</a>
+					<a href="">07 82 54 55 21</a>
+					<div>
+						<a href="https://github.com/Kh4yA" target="_blank">
+							<img src="/images/github-mark-white.png" alt="Logo de github" class='logo'>
+						</a>
+						<a href="https://www.linkedin.com/in/mathieu-daszczynski-4b9623194/" target="_blank" class='logo'>
+							<img src="/images/pngwing.com.png" alt="Logo de linkedin" class='logo'>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="line-horizon large-10 margin-auto m5p margin-bottom10px"></div>
+			<div class="large-8 margin-auto">
+				<p class='center-text copyright'>© 2025 Dev@syst</p>
+			</div>
+		</footer>
+	</body>
 </html>

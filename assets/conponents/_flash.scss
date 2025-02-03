@@ -1,0 +1,25 @@
+
+.alert {
+  position: absolute;
+  z-index: 1000;
+  top: 10vh;
+  right: 50%;
+  transform: translateX(50%);
+  border: 1px solid $error-color;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: lighten($error-color, 40);
+}
+.alert-success {
+  border-color: $success-color;
+  background-color: lighten($success-color, 40);
+}
+.alert-error {
+  border-color: $error-color;
+  background-color: lighten($error-color, 40);
+}
+.alert-warning {
+  border-color: $error-color;
+  background-color: lighten($error-color, 40);
+}

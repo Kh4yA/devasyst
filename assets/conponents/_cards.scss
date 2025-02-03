@@ -1,0 +1,15 @@
+.card{
+    @include card($blue-desk);
+    h2{
+        font-size: 24px;
+    }
+    p{
+        font-size: $font-size-fluid;
+    }
+    h4{
+        font-size: 20px;
+    }
+    button{
+        @include btn($blue-desk);
+    }
+}

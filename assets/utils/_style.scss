@@ -1,0 +1,374 @@
+// Style global
+body {
+  background-color: $background_color;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.1rem;
+  color: $text_color;
+  font-family: 'Poppins Round', sans-serif;
+  line-height: $line-height;
+}
+
+h1 {
+  font-size: calc($font-size-fluid * 2);
+  text-align: center;
+  font-weight: 700;
+
+  @media screen and (max-width: $mobile) {
+    font-size: calc($font-size-fluid * 1.4);
+  }
+}
+
+h2 {
+  font-size: calc($font-size-fluid * 1.5);
+  text-align: left;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: calc($font-size-fluid * 1.15);
+  text-align: left;
+  font-weight: 500;
+
+  @media screen and (max-width: 1400px) {
+    font-size: calc($font-size-fluid * 1.05);
+  }
+}
+
+h4 {
+  font-size: calc($font-size-fluid * 1.1);
+  text-align: left;
+  font-weight: 400;
+}
+
+p {
+  font-size: calc($font-size-fluid );
+
+  @media screen and (max-width: 1400px) {
+    font-size: calc($font-size-fluid * 0.8);
+  }
+
+}
+
+/*Home page*/
+.hero {
+ @include titleH1();
+  .image-container {
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
+  }
+
+  img {
+    max-width: 250px;
+    width: clamp(100px, 25vw, 250px);
+    height: auto;
+  }
+
+  svg {
+    width: fit-content;
+    height: auto;
+    max-width: 1000px;
+    display: block;
+
+    @media screen and (max-width: $tablet) {
+      min-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+
+    h1 {
+      font-size: calc($font-size-fluid * 1.5);
+    }
+  }
+}
+
+.scroll {
+  text-align: center;
+  margin-top: 5%;
+
+  svg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*** Nous choisir ***/
+.why-choose-us {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: $text_color;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature {
+  background: $white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: $blue-darken;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 1.4rem;
+  color: #172b4d;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.feature:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.feature:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.feature:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.feature:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.feature:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.feature:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.why-choose-us.visible .feature {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*** Nos Prestation ***/
+.prestation {
+  position: relative;
+  height: 100vh;
+  background-color: #501f1f;
+}
+
+.btn-devis {
+  position: fixed;
+  z-index: 10;
+  min-width: 210px;
+  width: fit-content;
+  top: -20px;
+  left: calc(50% - 15vw);
+  transform: translateX(-50%) !important;
+}
+
+.box-dev,
+.box-assist {
+  min-height: 30vh;
+}
+
+.box-dev {
+  background-color: $green-dev;
+  position: relative;
+  width: 70vw;
+  padding: 20px;
+  @media screen and (max-width: $tablet) {
+    width: 80vw;
+    padding: 30px 5px;
+  }
+}
+
+.box-dev::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20vw;
+  width: 20vw;
+  height: 100%;
+  background: $green-dev;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.box-assist {
+  background-color: $blue-desk;
+  position: relative;
+  padding: 20px;
+  right: -30vw;
+  width: 70vw;
+  @media screen and (max-width: $tablet) {
+    width: 80vw;
+    right: -20vw;
+    padding: 30px 5px;
+  }
+}
+
+.box-assist::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20vw; // Correction ici
+  width: 20vw;
+  height: 100%;
+  background: $blue-desk;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+.container-dev{
+  background-color: $green-dev;
+  padding: 20px;
+  border-radius: 20px;
+  @include titleH1();
+  svg {
+    width: fit-content;
+    height: auto;
+    max-width: 1000px;
+    display: block;
+
+    @media screen and (max-width: $tablet) {
+      min-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+
+    h1 {
+      font-size: calc($font-size-fluid * 1.5);
+    }
+    p{
+      font-size: calc($font-size-fluid * 0.8);
+    }
+  }
+}
+
+/*Description de l'entreprise*/
+.about {
+  background-color: $white;
+  border-radius: 20px;
+  padding: 20px;
+  @include titleH1();
+  @media screen and (max-width: $tablet) {
+    margin-top: 2%;
+    
+  }
+  .article1 {
+    background-color: $green-dev;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .article2 {
+    background-color: $blue-desk;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+  }
+}
+
+/*** ASSISTANCE ***/
+.container-recup{
+  background-color: $blue-desk;
+  padding: 20px;
+  border-radius: 20px;
+  @include titleH1();
+  svg {
+    width: fit-content;
+    height: auto;
+    max-width: 1000px;
+    display: block;
+
+    @media screen and (max-width: $tablet) {
+      min-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+
+    h1 {
+      font-size: calc($font-size-fluid * 1.5);
+    }
+    p{
+      font-size: calc($font-size-fluid * 0.8);
+    }
+  }
+}
+.conseil-recuperation {
+  background-color: #fffbcc;
+  color: #8a6d3b;
+  padding: 15px;
+  border-left: 5px solid #ffae42;
+  font-size: 16px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+/*Page de contact*/
+.contact .form-group,
+.container-connect .form-group  {
+  margin: 10px auto 10px auto;
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: $input-color;
+    border: 1px solid $text_color;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  textarea {
+    background-color: $input-color;
+    border: 1px solid $text_color;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: $text_color;
+    font-weight: bold;
+  }
+}

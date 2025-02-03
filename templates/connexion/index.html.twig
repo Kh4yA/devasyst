@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<section class="container-connect">
+		<form action="connect" method="post">
+			<div class='flex flex-wrap direction-column large-10 medium-12 small-12 margin-auto gap-20 space-around'>
+				<div class="form-group large-8 medium-12 small-12 flex">
+					<input type="email" name="email" id="email" placeholder='Email de connexion' class='large-10 margin-auto'>
+				</div>
+				<div class="form-group large-8 medium-12 small-12 flex">
+					<input type="password" name="password" id="password" placeholder='Mot de passe' class='large-10 margin-auto'>
+				</div>
+				<div class="large-8 medium-12 small-12 flex">
+					<button type="submit" class='button margin-auto'>Connexion</button>
+				</div>
+			</div>
+		</form>
+	</section>
+{% endblock %}

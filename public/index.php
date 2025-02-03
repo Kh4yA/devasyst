@@ -2,7 +2,10 @@
 
 use App\Router\Router;
 use App\Controllers\HomeController;
-
+use App\Controllers\AboutController;
+use App\Controllers\ConnexionController;
+use App\Controllers\ContactController;
+use App\Controllers\PrestationController;
 
 // Appel du fichier d'initialisation (init.php)
 if (file_exists(__DIR__."/../Utils/init.php")) {
@@ -18,6 +21,10 @@ $router = new Router();
 
 // Définir les routes
 $router->registerControllerRoutes(HomeController::class);
+$router->registerControllerRoutes(AboutController::class);
+$router->registerControllerRoutes(PrestationController::class);
+$router->registerControllerRoutes(ContactController::class);
+$router->registerControllerRoutes(ConnexionController::class);
 
 
 

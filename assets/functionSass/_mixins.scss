@@ -1,0 +1,48 @@
+@mixin btn($color){
+    background-color: $color;
+    color: #fff;
+    padding: 3px 25px;
+    height: fit-content;
+    border-radius: 15px;
+    cursor: pointer;
+    &:hover{
+        color: $text_color;
+        background-color: #fff;
+        border: 1px solid $color;
+    }
+}
+
+@mixin card($color){
+    background-color: $color;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+@mixin shadow($color){
+    box-shadow: 0 4px 10px $color;
+}
+@mixin titleH1(){
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1.4;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 0;
+        animation: fadeInUp 1s ease-in-out;
+      }
+      h1::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 4px;
+        background: $blue-darken;
+        margin: 8px auto 0;
+        transition: width 0.3s ease-in-out;
+      }
+      h1:hover::after {
+        width: 80%;
+      }
+    
+}

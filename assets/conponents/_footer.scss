@@ -1,0 +1,21 @@
+footer{
+    background-color: #1a306e;
+    color: #fff;
+    padding: 20px 0;
+    height: calc(30vh + 20px);
+    
+    a{
+        color: #fff;
+    }
+    .logo{
+        width: 28px;
+    }
+    p{
+        color: $white;
+    }
+    .copyright{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+}
+

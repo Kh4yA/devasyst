@@ -1,0 +1,103 @@
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.space-evenly{
+  justify-content: space-evenly;
+}
+.direction-column {
+  flex-direction: column;
+}
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.item-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.center-text {
+  text-align: center;
+}
+.margin-bottom20px {
+  margin-bottom: 20px;
+}
+.margin-bottom
+px {
+  margin-bottom: 
+  px;
+}
+.padding-bottom20px{
+  padding: 20px;
+}
+.mt20px{
+  margin-top: 20px;
+}
+.p20{
+  padding: 20px;
+}
+.gap-20{
+  gap: 20px;
+}
+.gap-5{
+  gap: 5px;
+}
+.line{
+  border-bottom: 1px solid #292626;
+}
+.container1440{
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.m5p{
+    margin-top: 5%;
+    @media screen and (max-width:$tablet) {
+        margin-top: 2%;
+    }
+}
+.m5b{
+    margin-bottom: 5%;
+}
+a{
+  color: black;
+  :visited{
+    color: black;
+  }
+}
+.color-dev{
+  background-color: $green-dev;
+  color: $text_color;
+}
+.color-desk{
+  background-color: $blue-desk;
+  color: $text_color;
+}
+.d-none{
+  display: none;
+}
+.line-horizon{
+  height: 1px;
+  background-color: $white;
+}
+.box {
+  width: fit-content;
+  gap: 10px;
+  padding: 5px 20px;
+  border-radius: $border-radius15;
+}
+.container-assistance,
+.container-dev-en-cours,
+.container-connect {
+  height: calc(100vh - 37vh - 20px);
+}

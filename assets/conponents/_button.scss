@@ -1,0 +1,31 @@
+.button{
+    padding: $p10 $p20;
+    border: 1px solid $text_color;
+    border-radius: 15px;
+    background-color: $button_color;
+    color: #fff;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: $text-color;
+        border: 1px solid $text_color;
+        transition: all 0.3s ease;
+        transform: scale(1.05);
+    }
+    @media screen and (max-width: $laptop){
+        padding: $p5 $p10;
+        font-size: 14px;
+        
+    }
+}
+.button {
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+.btn-blue{
+    @include btn(#fff);
+}
+.btn-purple{
+    @include btn($purple-light);
+}

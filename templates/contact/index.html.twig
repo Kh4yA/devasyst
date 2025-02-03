@@ -1,0 +1,63 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	devasyst | Contactez nous.
+{% endblock %}
+
+{% block meta %}
+	<meta name="description" content="Vous desirez contacter devasyst ? Un renseignement? une question? Un projet ? une demande de devis ? contactez devasyst.">
+	<link rel="canonical" href="https://www.devasyst.fr/contact">
+	<meta property="og:title" content="devasyst | Développement web et assistance informatique."/>
+	<meta property="og:description" content="Besoin d’un site web performant ou d’un dépannage informatique ? dev@syst vous accompagne avec des solutions sur mesure. Contactez-nous !"/>
+	<meta property="og:url" content="https://www.devasyst.fr/contact"/>
+	<meta property="og:image" content="https://devasyst.fr/images/logo-transparent-png.png"/>
+{% endblock %}
+
+{% block body %}
+	{% if flash('success') %}
+		<div class="alert alert-success large-8">
+			{{ flash('success') }}
+		</div>
+	{% elseif flash('error')%}
+		<div class="alert alert-error large-8">
+			{{ flash('error') }}
+		</div>
+	{% endif %}
+		<div class='contact container1440 about m5p large-12 m5b'>
+			<h1>Vous souhaitez nous contacter ?
+			</h1>
+			<h2 class=' center-text'>Discutez de vôtre projet ?</h2>
+			<form action="/contact/saveMessage" method="post" class='large-12 m5p'>
+				<div class='large-12'>
+					<div class="form-group large-8 medium-12 small-12 flex">
+						<input type="text" class="large-8 medium-12 small-12 margin-auto" id="name" name="name" required placeholder='Nom*'>
+					</div>
+					<div class="form-group large-8 medium-12 small-12 flex">
+						<input type="text" class="large-8 medium-12 small-12 margin-auto" id="firstName" name="firstName" required placeholder='Prénom*'>
+					</div>
+					<div class="form-group large-8 medium-12 small-12 flex">
+						<input type="email" class="large-8 medium-12 small-12 margin-auto" id="email" name="email" required placeholder='Email*'>
+					</div>
+					<div class="form-group large-8 medium-12 small-12 flex">
+						<textarea class="large-8 medium-12 small-12 margin-auto" id="message" name="message" rows='15' cols='30' required placeholder='Indiquez nous vôtre message*'></textarea>
+					</div>
+					<div class='flex large-12 justify-center'>
+						<button type="submit" class='button'>Envoyer</button>
+					</div>
+				</div>
+			</form>
+			<div class='flex item-center justify-center gap-5 m5p'>
+				<div class='line large-4'></div>
+				<p>Ou</p>
+				<div class='line large-4'></div>
+			</div>
+			<div>
+				<h3 class=' center-text m5p m5b'>Vous pouvez nous contacter par téléphone ou par mail.</h3>
+				<address class='flex space-evenly flex-wrap gap-20'>
+					<a href="mailto:contact@devassist.fr" class='button'>&#9993; contact@devasyst.fr</a>
+					<a href="tel:+33782545521" class='button'>&#9742; 07-82-54-55-21</a>
+				</address>
+
+			</div>
+		</div>
+	{% endblock %}

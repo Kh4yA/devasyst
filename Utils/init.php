@@ -22,7 +22,7 @@ error_reporting(E_ALL);
 define('BASE_PATH', dirname(__DIR__));
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../.config/constantes.php';
+require_once __DIR__ . '/constantes.php';
 // utilisation de la base de donnée
 $config = require __DIR__ . '/../.config/datadb.php';
 require "Database.php";

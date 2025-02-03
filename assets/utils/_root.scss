@@ -1,0 +1,58 @@
+/*** IMPORT FONT ***/
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto/Roboto-VariableFont_wdth_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Round";
+  src: url("fonts/Poppins-regular_Round/Poppins-regularRound-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+  
+/*** COLOR ***/
+$background_color: #f6f6f6;
+$text_color: #0e1a3f;
+$button_color: #294FE9;
+$blue-darken: #1a306e;
+$white: #fff;
+$blue-light: #3498db;
+$purple-light: #d07eff;
+$green-dev: rgba(4, 209, 182, 0.2980392157);
+$blue-desk: #def3fc;
+$input-color: #f6f6f6;
+$error-color : #ce031b;
+$success-color : #1e8341;
+
+
+
+
+/*** SIZE ***/
+$font-size: 16px;
+$font-size-large: 22depx;
+$font-size-small: 14px;
+$font-size-min: 16px;
+$font-size-max: 20px;
+$line-height: 1.6;
+
+$font-size-fluid: clamp(
+    $font-size-min,
+    calc(1rem + 1vw),
+    $font-size-max
+)
+;
+/*** OTHER ***/
+$border-radius15: 15px;
+$p5: 5px;
+$p10: 10px;
+$p20: 20px;
+
+/*** RESPONSIVE ***/
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;

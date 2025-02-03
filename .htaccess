@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Autoriser l'accès direct au sitemap.xml et robots.txt
+RewriteRule ^(sitemap\.xml|robots\.txt)$ $1 [L]
+
+RewriteRule ^(.*)$ public/$1 [L]
