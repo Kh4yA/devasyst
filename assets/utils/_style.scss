@@ -260,7 +260,11 @@ p {
     height: auto;
     max-width: 1000px;
     display: block;
-
+    .techno-logo{
+      i{
+        width: 80px;
+      }
+    }
     @media screen and (max-width: $tablet) {
       min-width: 350px;
       margin-left: auto;

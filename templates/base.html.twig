@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<meta charset="UTF-8">
+		<meta
+		charset="UTF-8">
 		<!-- SEO -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="author" content="devasyst">
 		<meta name="robots" content="index, follow">
 		<meta name="revisit-after" content="7 days">
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="devasyst" />
-		<meta property="og:locale" content="fr_FR" />		
-		{% block meta %}{% endblock %}
+		<meta property="og:type" content="website"/>
+		<meta property="og:site_name" content="devasyst"/>
+		<meta property="og:locale" content="fr_FR"/> {% block meta %}{% endblock %}
 		<!-- Import des styles -->
 		{% block stylesheets %}
 			<link rel="stylesheet" href="/css/style.css">
 		{% endblock %}
 		<!-- import fichier javascript -->
-			<script type='module' src="/public/js/app.js" defer></script>
-		{% block scripts %}
-		{% endblock %}
+		<script type='module' src="/public/js/app.js" defer></script>
+		{% block scripts %}{% endblock %}
 		<!-- Font awsome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<link
+		rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="/images/logo-transparent-png.png" type="image/x-icon">
 		<link rel="apple-touch-icon" sizes="57x57" href="/images/logo-transparent-png.png">
@@ -101,9 +101,9 @@
 						</li>
 					</ul>
 				</nav>
-							<div>
-				<a href="/contact" class='button btn-head-mobile'>Nous contacter</a>
-			</div>
+				<div>
+					<a href="/contact" class='button btn-head-mobile'>Nous contacter</a>
+				</div>
 			</div>
 			<div>
 				<a href="/contact" class='button btn-head'>Nous contacter</a>
@@ -118,13 +118,13 @@
 		</main>
 		<!-- Footer -->
 		<footer class='m5p'>
-			<div class=" large-8 margin-auto">
-				<div class="flex direction-column gap-5">
+			<div class="nav-box large-6 small-12 margin-auto flex flex-wrap space-around p20">
+				<nav class="flex direction-column gap-5 large-4 medium-12 small-12">
 					<div>
 						<img src="/images/dev@syst_white.png" alt="Logo du site devassist avec devise Developpement et assistance informatique a votre service.">
 					</div>
-					<a href="#" class>contact@devAsyst.fr</a>
-					<a href="">07 82 54 55 21</a>
+					<a href="mailto:contact@devasyst.fr" class></a>
+					<a href="tel:+330782545521">07 82 54 55 21</a>
 					<div>
 						<a href="https://github.com/Kh4yA" target="_blank">
 							<img src="/images/github-mark-white.png" alt="Logo de github" class='logo'>
@@ -133,9 +133,31 @@
 							<img src="/images/pngwing.com.png" alt="Logo de linkedin" class='logo'>
 						</a>
 					</div>
+					ouvert du lundi au vendredi de 8h00 a 17h00.
+				</nav>
+				<nav class='nav-footer large-4'>
+					<h4>Navigation rapide</h4>
+					<ul>
+						<li><a href="/">Acceuil</a></li>
+						<li><a href="/l-entreprise">L'entreprise</a></li>
+						<li><a href="/contact">Contact</a></li>
+						<li><a href="#">Mention légale</a></li>
+					</ul>
+				</nav>
+				<nav class='nav-footer large-4'>
+					<h4>Nos prestations</h4>
+					<ul>
+						<li><a href="/prestations/developpement/site-vitrine">Développement de sites vitrines</a></li>
+						<li><a href="/presatations/developpement/application-web">Développement d’applications web</a></li>
+						<li><a href="/prestations/assistance/reccuperation-de-donnees">Récupération de données</a></li>
+						<li><a href="/prestations/assistance/assistance-technique">Assistance technique</a></li>
+					</ul>
+				</nav>
+				<div class='large-12'>
+					<a href="#" class='mention'>Mention légale</a>
 				</div>
 			</div>
-			<div class="line-horizon large-10 margin-auto m5p margin-bottom10px"></div>
+			<div class="line-horizon large-10 margin-auto"></div>
 			<div class="large-8 margin-auto">
 				<p class='center-text copyright'>© 2025 Dev@syst</p>
 			</div>
