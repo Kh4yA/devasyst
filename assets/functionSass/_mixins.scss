@@ -32,17 +32,6 @@
         padding: 20px 0;
         animation: fadeInUp 1s ease-in-out;
       }
-      h1::after {
-        content: "";
-        display: block;
-        width: 50%;
-        height: 4px;
-        background: $blue-darken;
-        margin: 8px auto 0;
-        transition: width 0.3s ease-in-out;
-      }
-      h1:hover::after {
-        width: 80%;
-      }
+
     
 }

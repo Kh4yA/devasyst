@@ -52,6 +52,12 @@ px {
 .gap-5{
   gap: 5px;
 }
+.w100{
+  width: 100%;
+}
+.phb10px{
+  padding: 10px 0;
+}
 .line{
   border-bottom: 1px solid #292626;
 }
@@ -65,6 +71,9 @@ px {
     @media screen and (max-width:$tablet) {
         margin-top: 2%;
     }
+}
+.m2p{
+    margin-top: 2%;
 }
 .m5b{
     margin-bottom: 5%;
@@ -95,6 +104,10 @@ a{
   gap: 10px;
   padding: 5px 20px;
   border-radius: $border-radius15;
+  @media screen and (max-width: $tablet) {
+    padding: 5px 10px;
+    
+  }
 }
 .container-assistance,
 .container-dev-en-cours,

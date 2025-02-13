@@ -1,30 +1,42 @@
-import { GestionMessageFash } from "./usuelClass"
+// import { GestionMessageFash } from "./usuelClass"
 
 const btn_prestation = document.getElementById('prestation');
+const btn_prestationMobile = document.getElementById('prestationMobile');
 const menu = document.querySelector('.menu-slide');
+const menuMobile = document.querySelector('.menu-slide-mobile');
 
 const openBurger = document.getElementById('open-burger')
 const burger = document.querySelector('.burger')
-const header = document.querySelector('.header-nav')
+const menuBurger = document.querySelector('.menu-burger')
 
-if(document.querySelectorAll('.alert' != null)){
-  const flashMessages = document.querySelectorAll('.alert')
+// if(document.querySelectorAll('.alert' != null)){
+//   const flashMessages = document.querySelectorAll('.alert')
   
-  const flashMessage = new GestionMessageFash(flashMessages)
-  flashMessage.flash()
-}
+//   const flashMessage = new GestionMessageFash(flashMessages)
+//   flashMessage.flash()
+// }
 
 /**
  * ANIMATION DU MENU BURGER
  */
 openBurger.addEventListener('click', () => {
   burger.classList.toggle('open')
-  header.classList.toggle('active')
+  menuBurger.classList.toggle('d-none')
+  if(!menuMobile.classList.contains('hidden')){
+    menuMobile.classList.remove('visible')
+}
+
 })
 
 btn_prestation.addEventListener('click', () => {
     menu.classList.add('visible');
     menu.classList.remove('hidden');
+    console.log('click');
+    
+});
+btn_prestationMobile.addEventListener('click', () => {
+    menuMobile.classList.add('visible')
+    menuMobile.classList.remove('hidden')
 });
 
 menu.addEventListener('mouseleave', () => {
