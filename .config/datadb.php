@@ -2,7 +2,7 @@
 
 return [
     "user_name" => "devserhdevasyst",
-    "password" =>"354gHGNB5hnDnl59uj34",
+    "password" =>"HfJ65dgnfEG2rhgb9IRheryg3FEd",
     "host"=>"devserhdevasyst.mysql.db",
     "name"=>"devserhdevasyst"
 ];
