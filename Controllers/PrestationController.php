@@ -32,7 +32,7 @@ class PrestationController extends BaseController
      *
      * @return void
      */
-    #[Route('/prestations/assistance/reccuperation-de-donnees')]
+    #[Route('/prestations/assistance/recuperation-de-donnees')]
     public function indexRecuperationDonnee()
     {
         return $this->render('prestations/assistance/reccuperation-donnees/index.html.twig');

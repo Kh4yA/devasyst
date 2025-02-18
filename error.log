@@ -1,0 +1,39 @@
+[15-Feb-2025 19:01:26 UTC] PHP Warning:  require(/Applications/MAMP/htdocs/devasyst/Utils/../.config/datadb.php): Failed to open stream: No such file or directory in /Applications/MAMP/htdocs/devasyst/Utils/init.php on line 27
+[15-Feb-2025 19:01:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/Applications/MAMP/htdocs/devasyst/Utils/../.config/datadb.php' (include_path='.:/Applications/MAMP/bin/php/php8.2.0/lib/php') in /Applications/MAMP/htdocs/devasyst/Utils/init.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/devasyst/public/index.php(12): require_once()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/devasyst/Utils/init.php on line 27
+[15-Feb-2025 19:01:29 UTC] PHP Warning:  require(/Applications/MAMP/htdocs/devasyst/Utils/../.config/datadb.php): Failed to open stream: No such file or directory in /Applications/MAMP/htdocs/devasyst/Utils/init.php on line 27
+[15-Feb-2025 19:01:29 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/Applications/MAMP/htdocs/devasyst/Utils/../.config/datadb.php' (include_path='.:/Applications/MAMP/bin/php/php8.2.0/lib/php') in /Applications/MAMP/htdocs/devasyst/Utils/init.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/devasyst/public/index.php(12): require_once()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/devasyst/Utils/init.php on line 27
+[15-Feb-2025 19:01:30 UTC] PHP Warning:  require(/Applications/MAMP/htdocs/devasyst/Utils/../.config/datadb.php): Failed to open stream: No such file or directory in /Applications/MAMP/htdocs/devasyst/Utils/init.php on line 27
+[15-Feb-2025 19:01:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/Applications/MAMP/htdocs/devasyst/Utils/../.config/datadb.php' (include_path='.:/Applications/MAMP/bin/php/php8.2.0/lib/php') in /Applications/MAMP/htdocs/devasyst/Utils/init.php:27
+Stack trace:
+#0 /Applications/MAMP/htdocs/devasyst/public/index.php(12): require_once()
+#1 {main}
+  thrown in /Applications/MAMP/htdocs/devasyst/Utils/init.php on line 27
+[18-Feb-2025 16:04:50 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findOneBy() on null in /Applications/MAMP/htdocs/devasyst/Controllers/ConnexionController.php:23
+Stack trace:
+#0 [internal function]: App\Controllers\ConnexionController->connect()
+#1 /Applications/MAMP/htdocs/devasyst/Router/Router.php(65): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/devasyst/public/index.php(33): App\Router\Router->resolve('/admin-connect-...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/devasyst/Controllers/ConnexionController.php on line 23
+[18-Feb-2025 16:05:32 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findOneBy() on null in /Applications/MAMP/htdocs/devasyst/Controllers/ConnexionController.php:25
+Stack trace:
+#0 [internal function]: App\Controllers\ConnexionController->connect()
+#1 /Applications/MAMP/htdocs/devasyst/Router/Router.php(65): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/devasyst/public/index.php(33): App\Router\Router->resolve('/admin-connect-...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/devasyst/Controllers/ConnexionController.php on line 25
+[18-Feb-2025 16:05:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function findOneBy() on null in /Applications/MAMP/htdocs/devasyst/Controllers/ConnexionController.php:25
+Stack trace:
+#0 [internal function]: App\Controllers\ConnexionController->connect()
+#1 /Applications/MAMP/htdocs/devasyst/Router/Router.php(65): call_user_func_array(Array, Array)
+#2 /Applications/MAMP/htdocs/devasyst/public/index.php(33): App\Router\Router->resolve('/admin-connect-...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/devasyst/Controllers/ConnexionController.php on line 25

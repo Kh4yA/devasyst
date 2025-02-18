@@ -1,48 +1,69 @@
-@mixin btn($color){
-    background-color: $color;
-    color: #fff;
-    padding: 3px 25px;
-    height: fit-content;
-    border-radius: 15px;
-    cursor: pointer;
-    &:hover{
-        color: $text_color;
-        background-color: #fff;
-        border: 1px solid $color;
+@mixin btn($color) {
+  background-color: $color;
+  color: #fff;
+  padding: 3px 25px;
+  height: fit-content;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover {
+    color: $text_color;
+    background-color: #fff;
+    border: 1px solid $color;
+  }
+}
+
+@mixin card($color) {
+  background-color: $color;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@mixin shadow($color) {
+  box-shadow:4px 10px $color;
+  min-width: 350px;
+}
+
+@mixin rect($color) {
+  position: absolute;
+  z-index: -10;
+  width: 80vw;
+  height: 700px;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-12.39deg);
+  background: $color;
+
+  @media screen and (max-width: $desktop) {
+    width: 60vw;
+    height: 500px;
+    transform: translateX(-50%) rotate(-12.39deg);
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 0;
+    height: 50vh;
+    transform: translateX(-50%) rotate(0);
+  }
+}
+@mixin svgLogo(){
+    svg {
+    width: fit-content;
+    height: auto;
+    max-width: 1000px;
+    display: block;
+
+    @media screen and (max-width: $tablet) {
+      min-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
     }
-}
+  }
+  @media screen and (max-width: $tablet) {
+    flex-wrap: wrap;
+    margin-top: 25%;
 
-@mixin card($color){
-    background-color: $color;
-    border-radius: 20px;
-    padding: 20px;
-}
+  }
 
-@mixin shadow($color){
-    box-shadow: 0 4px 10px $color;
-}
-@mixin titleH1(){
-    h1 {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 1.4;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px 0;
-        animation: fadeInUp 1s ease-in-out;
-      }
-      h1::after {
-        content: "";
-        display: block;
-        width: 50%;
-        height: 4px;
-        background: $blue-darken;
-        margin: 8px auto 0;
-        transition: width 0.3s ease-in-out;
-      }
-      h1:hover::after {
-        width: 80%;
-      }
-    
 }

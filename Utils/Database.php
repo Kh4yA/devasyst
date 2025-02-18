@@ -35,6 +35,7 @@ class Database
                 $bdd->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
                 $this->bdd = $bdd;
             } catch (\PDOException $exeption) {
+                var_dump($this->db_host, $this->db_name, $this->user_name, $this->password);
                 die("Erreur de connexion à la base de données :". $exeption->getMessage());
             }
         }

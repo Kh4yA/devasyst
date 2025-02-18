@@ -9,12 +9,12 @@ const openBurger = document.getElementById('open-burger')
 const burger = document.querySelector('.burger')
 const menuBurger = document.querySelector('.menu-burger')
 
-// if(document.querySelectorAll('.alert' != null)){
-//   const flashMessages = document.querySelectorAll('.alert')
+if(document.querySelectorAll('.alert' != null)){
+  const flashMessages = document.querySelectorAll('.alert')
   
-//   const flashMessage = new GestionMessageFash(flashMessages)
-//   flashMessage.flash()
-// }
+  const flashMessage = new GestionMessageFash(flashMessages)
+  flashMessage.flash()
+}
 
 /**
  * ANIMATION DU MENU BURGER

@@ -17,7 +17,7 @@
 			<link rel="stylesheet" href="/css/style.css">
 		{% endblock %}
 		<!-- import fichier javascript -->
-		<script type='module' src="/public/js/app.js" defer></script>
+		<script  src="/js/app.js" defer></script>
 		{% block scripts %}{% endblock %}
 		<!-- Font awsome -->
 		<link
@@ -83,8 +83,8 @@
 					</div>
 				</div>
 				<div class="menu-slide flex space-evenly hidden gap-20">
-					<div>
-						<p class='color-dev box center-text margin-bottom10px margin-auto'>Developpement</p>
+					<div class='color-dev box large-6'>
+						<p class='margin-bottom10px'><i>Developpement</i></p>
 						<ul class='flex direction-column gap-5 phb10px'>
 							<li>
 								<a href="/prestations/developpement/site-vitrine">
@@ -98,12 +98,12 @@
 							</li>
 						</ul>
 					</div>
-					<div>
-						<p class='color-desk box center-text margin-bottom10px margin-auto'>Assistance informatique</p>
+					<div class="color-desk box large-6">
+						<p class='margin-bottom10px'><i>Assistance informatique</i></p>
 						<ul class='flex direction-column gap-5 phb10px'>
 							<li>
-								<a href="/prestations/assistance/reccuperation-de-donnees">
-									<b>Réccuperation de données</b>
+								<a href="/prestations/assistance/recuperation-de-donnees">
+									<b>Récuperation de données</b>
 								</a>
 							</li>
 							<li>
@@ -119,9 +119,9 @@
 				</div>
 			</div>
 			<div class='menu-burger d-none'>
-				<div class="line mt20px"></div>
+				<div class="line mt10px"></div>
 				<nav>
-					<ul class='flex direction-column item-center gap-20 mt5p'>
+					<ul class='flex direction-column item-center gap-20 mt2p'>
 						<li class='mt10px'>
 							<a href="/">Acceuil</a>
 						</li>
@@ -136,8 +136,8 @@
 								</p>
 							</div>
 							<div class="menu-slide-mobile flex item-center space-evenly d-none gap-20">
-								<div>
-									<p class='color-dev box center-text margin-auto phb10px'>Developpement</p>
+								<div class='color-dev box'>
+									<p class='phb10px'><i>Developpement</i></p>
 									<ul class='flex direction-column item-center phb10px'>
 										<li>
 											<a href="/prestations/developpement/site-vitrine">
@@ -151,12 +151,12 @@
 										</li>
 									</ul>
 								</div>
-								<div>
-									<p class='color-desk box center-text phb10px margin-auto'>Assistance informatique</p>
+								<div class='color-desk box mt2p'>
+									<p class=' phb10px'><i>Assistance informatique</i></p>
 									<ul class='flex direction-column item-center phb10px'>
 										<li>
-											<a href="/prestations/assistance/reccuperation-de-donnees">
-												<b>Réccuperation de données</b>
+											<a href="/prestations/assistance/recuperation-de-donnees">
+												<b>Récuperation de données</b>
 											</a>
 										</li>
 										<li>
@@ -175,7 +175,7 @@
 							<a href="/l-entreprise">L'entreprise</a>
 						</li>
 					</ul>
-					<div class="flex item-center mt5p">
+					<div class="flex item-center mt2p">
 						<a href="/contact" class='button margin-auto'>Contact</a>
 					</div>
 
@@ -215,7 +215,7 @@
 				<nav class='nav-footer large-4'>
 					<h4>Navigation rapide</h4>
 					<ul>
-						<li><a href="/">Acceuil</a></li>
+						<li><a href="/">Accueil</a></li>
 						<li><a href="/l-entreprise">L'entreprise</a></li>
 						<li><a href="/contact">Contact</a></li>
 						<li><a href="#">Mention légale</a></li>
@@ -226,7 +226,7 @@
 					<ul>
 						<li><a href="/prestations/developpement/site-vitrine">Développement de sites vitrines</a></li>
 						<li><a href="/presatations/developpement/application-web">Développement d’applications web</a></li>
-						<li><a href="/prestations/assistance/reccuperation-de-donnees">Récupération de données</a></li>
+						<li><a href="/prestations/assistance/recuperation-de-donnees">Récupération de données</a></li>
 						<li><a href="/prestations/assistance/assistance-technique">Assistance technique</a></li>
 					</ul>
 				</nav>
@@ -236,7 +236,7 @@
 			</div>
 			<div class="line-horizon large-10 margin-auto"></div>
 			<div class="large-8 margin-auto">
-				<p class='center-text copyright'>© 2025 Dev@syst</p>
+				<p class='center-text copyright'>© 2025 Devasyst</p>
 			</div>
 		</footer>
 	</body>
