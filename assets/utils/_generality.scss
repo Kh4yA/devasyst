@@ -78,11 +78,13 @@ px {
 .mt10p{
     margin-top: 10%;
 }
-
+.mb10p{
+    margin-bottom: 10%;
+}
 .mt2p{
     margin-top: 2%;
 }
-.m5b{
+.mb5p{
     margin-bottom: 5%;
 }
 .mb10px{
@@ -118,4 +120,7 @@ a{
 .container-dev-en-cours,
 .container-connect {
   height: calc(100vh - 37vh - 20px);
+}
+.p-error{
+  color: red;
 }

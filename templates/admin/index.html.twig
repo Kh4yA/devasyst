@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+	devasyst | dashbord
+{% endblock %}
+
+
+{% block body %}
+
+{% if flash('success') %}
+    <div class="alert alert-success large-8">
+        {{ flash('success') }}
+    </div>
+{% elseif flash('error')%}
+    <div class="alert alert-error large-8">
+        {{ flash('error') }}
+    </div>
+{% endif %}
+
+<div class="btn-deco margin-bottom20px container1440 large-12 flex justify-center">
+    <a href="/connected/admin-logout" class='btn-deconnexion'>Deconnexion</a>
+</div>
+<section class='container-dash mt10p container1440 mb10p'>
+    <table class='large-12'> 
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td>{{ message.gethtml('nom') }}</td>
+                    <td>{{ message.gethtml('prenom') }}</td>
+                    <td>{{ message.gethtml('email') }}</td>
+                    <td class='message-limit'>{{ message.gethtml('message') }}</td>
+                    <td>{{ message.gethtml('date_post') }}</td>
+                    <td class='action'>
+                        <a href="/admin-message-delete/{{ message.id }}" class='btn-delete'><i class="fa-solid fa-trash"></i></a>
+                        <a href="/connected/admin-dashbord/view/{{ message.id }}"><i class="fa-solid fa-eye"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+    </table>
+</section>
+{% endblock %}

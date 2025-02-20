@@ -7,5 +7,5 @@ use App\Utils\_Model;
 class Message extends _Model
 {
     protected $table = 'messages';
-    protected $fields = ['name', 'firstName', 'email', 'message', 'date_post'];
+    protected $fields = ['nom', 'prenom', 'email', 'message', 'date_post'];
 }

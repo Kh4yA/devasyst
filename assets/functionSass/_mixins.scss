@@ -1,15 +1,16 @@
 @mixin btn($color) {
   background-color: $color;
   color: #fff;
-  padding: 3px 25px;
+  padding: 5px 20px;
   height: fit-content;
   border-radius: 15px;
+  border: 1px solid $color;
   cursor: pointer;
 
   &:hover {
     color: $text_color;
     background-color: #fff;
-    border: 1px solid $color;
+    border: 1px solid $text_color;
   }
 }
 

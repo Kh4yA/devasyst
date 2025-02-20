@@ -13,7 +13,7 @@ use Twig\Extension\DebugExtension;
 use App\Framework\Twig\TwigExtension;
 use App\Framework\Service\FilterMemory;
 
-ini_set('display_errors', 1);
+// ini_set('display_errors', 1); // desactiver en production
 ini_set('log_errors', 1);
 ini_set('error_log', dirname(__DIR__ ). '/error.log');
 error_reporting(E_ALL);

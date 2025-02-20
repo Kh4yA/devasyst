@@ -29,8 +29,8 @@ class ContactController extends BaseController
     public function saveMessage()
     {
         try{
-            $name = $_POST['name'];
-            $firstName = $_POST['firstName'];
+            $name = $_POST['nom'];
+            $firstName = $_POST['prenom'];
             $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) ;
             $message = $_POST['message'];
             if (empty($name) || empty($firstName) || empty($email) || empty($message)) {

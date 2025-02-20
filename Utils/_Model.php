@@ -46,9 +46,12 @@ class _Model
      */
     function getHtml($fieldName): string
     {
-        return $this->get($fieldName) === null ? $fieldName = "" : nl2br(htmlentities($this->get($fieldName)));
+        $value = $this->get($fieldName);
+        if ($value === null) return "";
+    
+        // Encoder les caractères spéciaux mais garder les `<br />`
+        return str_replace(["&lt;br&gt;", "&lt;br /&gt;"], "<br />",htmlspecialchars($value, ENT_QUOTES, 'UTF-8'));
     }
-
     /**
      * recupere la valeur de l'id
      *  @return int (valeur de l'id)

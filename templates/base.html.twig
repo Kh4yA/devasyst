@@ -9,15 +9,15 @@
 		<meta name="author" content="devasyst">
 		<meta name="robots" content="index, follow">
 		<meta name="revisit-after" content="7 days">
-		<meta property="og:type" content="website"/>
-		<meta property="og:site_name" content="devasyst"/>
-		<meta property="og:locale" content="fr_FR"/> {% block meta %}{% endblock %}
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="devasyst">
+		<meta property="og:locale" content="fr_FR"> {% block meta %}{% endblock %}
 		<!-- Import des styles -->
 		{% block stylesheets %}
-			<link rel="stylesheet" href="/css/style.css">
+			<link rel="stylesheet" href="/css/style.min.css">
 		{% endblock %}
 		<!-- import fichier javascript -->
-		<script  src="/js/app.js" defer></script>
+		<script type='module' src="/js/app.js"></script>
 		{% block scripts %}{% endblock %}
 		<!-- Font awsome -->
 		<link
@@ -84,7 +84,9 @@
 				</div>
 				<div class="menu-slide flex space-evenly hidden gap-20">
 					<div class='color-dev box large-6'>
-						<p class='margin-bottom10px'><i>Developpement</i></p>
+						<p class='margin-bottom10px'>
+							<i>Developpement</i>
+						</p>
 						<ul class='flex direction-column gap-5 phb10px'>
 							<li>
 								<a href="/prestations/developpement/site-vitrine">
@@ -99,7 +101,9 @@
 						</ul>
 					</div>
 					<div class="color-desk box large-6">
-						<p class='margin-bottom10px'><i>Assistance informatique</i></p>
+						<p class='margin-bottom10px'>
+							<i>Assistance informatique</i>
+						</p>
 						<ul class='flex direction-column gap-5 phb10px'>
 							<li>
 								<a href="/prestations/assistance/recuperation-de-donnees">
@@ -125,7 +129,9 @@
 						<li class='mt10px'>
 							<a href="/">Acceuil</a>
 						</li>
-						<div class="line large-10"></div>
+					</ul>
+					<div class="line large-10 margin-auto"></div>
+					<ul class='flex direction-column item-center gap-20'>
 						<li class=''>
 							<div class='flex item-center justify-center gap-5 phb10px' id='prestationMobile'>
 								<p>Nos prestations</p>
@@ -137,7 +143,9 @@
 							</div>
 							<div class="menu-slide-mobile flex item-center space-evenly d-none gap-20">
 								<div class='color-dev box'>
-									<p class='phb10px'><i>Developpement</i></p>
+									<p class='phb10px'>
+										<i>Developpement</i>
+									</p>
 									<ul class='flex direction-column item-center phb10px'>
 										<li>
 											<a href="/prestations/developpement/site-vitrine">
@@ -152,7 +160,9 @@
 									</ul>
 								</div>
 								<div class='color-desk box mt2p'>
-									<p class=' phb10px'><i>Assistance informatique</i></p>
+									<p class=' phb10px'>
+										<i>Assistance informatique</i>
+									</p>
 									<ul class='flex direction-column item-center phb10px'>
 										<li>
 											<a href="/prestations/assistance/recuperation-de-donnees">
@@ -167,9 +177,10 @@
 									</ul>
 								</div>
 							</div>
-
 						</li>
-						<div class="line large-10"></div>
+					</ul>
+					<div class="line large-10 margin-auto"></div>
+					<ul class='flex direction-column item-center gap-20'>
 
 						<li class=''>
 							<a href="/l-entreprise">L'entreprise</a>
@@ -188,7 +199,7 @@
 			{% block body %}{% endblock %}
 		</main>
 		<!-- Footer -->
-		<footer class='mt10p'>
+		<footer class=''>
 			<div class="nav-box large-6 small-12 margin-auto flex flex-wrap space-around p20">
 				<nav class="flex direction-column gap-5 large-4 medium-12 small-12">
 					<div>
@@ -218,7 +229,6 @@
 						<li><a href="/">Accueil</a></li>
 						<li><a href="/l-entreprise">L'entreprise</a></li>
 						<li><a href="/contact">Contact</a></li>
-						<li><a href="#">Mention légale</a></li>
 					</ul>
 				</nav>
 				<nav class='nav-footer large-4'>
@@ -230,8 +240,9 @@
 						<li><a href="/prestations/assistance/assistance-technique">Assistance technique</a></li>
 					</ul>
 				</nav>
-				<div class='large-12'>
-					<a href="#" class='mention'>Mention légale</a>
+				<div class='large-12 flex gap-5'>
+					<a href="/mentions-legales" class='mention'>Mention légales</a>
+					<a href="/politique-de-confidentialite" class='mention'>Politique de confidentialité</a>
 				</div>
 			</div>
 			<div class="line-horizon large-10 margin-auto"></div>

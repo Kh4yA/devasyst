@@ -55,6 +55,16 @@ h4 {
   font-weight: 400;
 }
 
+h5 {
+  font-size: calc($font-size-fluid * 1.1);
+  text-align: left;
+  font-weight: 900;
+  @media screen and (max-width: $tablet) {
+    font-size: calc($font-size-fluid * 0.9);
+    
+  }
+}
+
 p {
   font-size: calc($font-size-fluid );
 
@@ -354,17 +364,21 @@ p {
   }
 }
 
-.contact .form-group,
-.form-group {
+.contact .group-form,
+.group-form {
 
   input[type="text"],
   input[type="email"],
   input[type="password"] {
     background-color: $input-color;
-    border: 1px solid $text_color;
     border-radius: 20px;
     padding: 15px;
   }
+
+  .input-error {
+    border: 2px solid red;
+  }
+
 
   textarea {
     background-color: $input-color;
@@ -377,5 +391,91 @@ p {
   textarea::placeholder {
     color: $text_color;
     font-weight: bold;
+  }
+}
+
+/*** DASHBORD ***/
+.btn-deco {
+  margin-top: 5vh;
+}
+
+.container-dash {
+  background-color: $blue-desk;
+  padding: 20px;
+  border-radius: 20px;
+  color: $text_color;
+  height: 40vh;
+  overflow-x: scroll;
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead {
+      background-color: #cacaca;
+      color: $text_color;
+
+      th {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: $white;
+
+        td {
+          padding: 10px;
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 150px;
+
+          @media screen and (max-width: $desktop) {
+            max-width: 90px;
+          }
+
+          @media screen and (max-width: $tablet) {
+            max-width: 70px;
+          }
+
+          @media screen and (max-width: $mobile) {
+            max-width: 50px;
+          }
+
+        }
+      }
+
+      .action {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        width: 60px;
+      }
+
+      .fa-trash {
+        color: red;
+      }
+    }
+  }
+}
+
+.mentions-legales {
+  padding: 0 5px;
+
+  a {
+    text-decoration: underline;
+    color: $button_color;
+  }
+
+  ul {
+    list-style-type: circle;
+    padding-left: 50px;
+
+    li {
+      font-size: 16px;
+    }
   }
 }

@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    devasyst | dashbord
+{% endblock %}
+
+{% block body %}
+
+{% if flash('success') %}
+    <div class="alert alert-success large-8">
+        {{ flash('success') }}
+    </div>
+{% elseif flash('error')%}
+    <div class="alert alert-error large-8">
+        {{ flash('error') }}
+    </div>
+{% endif %}
+
+<div class="btn-deco margin-bottom20px container1440 large-12 flex justify-center gap-5">
+    <a href="/connected/admin-logout" class='btn-deconnexion'>Deconnexion</a>
+    <a href="/connected/admin-dashbord" class='button'>Retour</a>
+</div>
+<section class='container-dash mt10p container1440 mb10p'>
+    <div class="view-message">
+        <p>{{message.gethtml('nom')}} {{message.gethtml('prenom')}}</p>
+        <p>{{message.gethtml('date_post')}}</p>
+        <p>{{message.gethtml('email')}}</p>
+        <p>{{message.gethtml('message')}}</p>
+   </div>
+</section>
+{% endblock %}

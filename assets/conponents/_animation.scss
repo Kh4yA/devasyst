@@ -55,7 +55,7 @@
 }
   .anime{
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateX(-100px);
     @media screen and (max-width: $laptop) {
       transform:rotranslateX(0);
     }
@@ -63,25 +63,10 @@
   }
   .anime-reveal{
     opacity: 1;
-    transform:rotate(0) translateY(0);
+    transform:rotate(0) translateX(0);
     transition: all .3s ease;
   }
   
-  .anime-left {
-    opacity: 1;
-    animation: slideleft .3s ease-in-out;
-    @media screen and (max-width: $laptop) {
-      transform:rotate(0) translateX(0);
-        
-    }
-  }
-  .anime-right {
-    animation: slideright .3s ease-in-out;
-    @media screen and (max-width: $laptop) {
-      transform:rotate(-0) translateX(0);
-        
-    }
-  }
   .whell-gear {
     transform-origin: 1122.5px 195.5px;
     animation: rotateGear 5s linear infinite;
@@ -102,15 +87,15 @@
     animation: scrollUp 8s linear infinite;
 }
 /*** NOUS CHOISIR ***/ 
-.feature:hover {
-  transform: translateY(-5px);
-}
+// .feature:hover {
+//   transform: translateY(-5px);
+// }
 
-.feature {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
+// .feature {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+// }
 
 .feature:nth-child(1) {
   transition-delay: 0.1s;
