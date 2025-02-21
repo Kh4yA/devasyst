@@ -469,6 +469,13 @@ p {
   color: white;
   text-align: center;
   padding: 10px;
+  p{
+    color: white;
+  }
+  a{
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 #cookie-banner button {

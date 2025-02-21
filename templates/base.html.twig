@@ -2,7 +2,22 @@
 <html lang="fr">
 	<head>
 		<!-- Google Tag Manager -->
-		<script type='module' src='/js/home.js'></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KPLKC2D6');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-96EHNBV2PT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-96EHNBV2PT');
+</script>
+		<script src='/js/home.js'></script>
 		<meta
 		charset="UTF-8">
 		<!-- SEO -->
@@ -209,10 +224,17 @@ f.parentNode.insertBefore(j, f);
 				</nav>
 
 			</div>
+
 		</header>
 		<!-- Main Corp du site-->
 		<main>
 			{% block body %}{% endblock %}
+			<div id="cookie-banner">
+				<p>	Ce site utilise des cookies, y compris ceux de Google Analytics, pour analyser l’utilisation du site. Vous pouvez accepter ou refuser ces cookies. Pour plus d’informations, consultez notre <a href="/politique-de-confidentialite">politique de confidentialité</a>.</p>
+				<button id="accept-cookies">Accepter</button>
+				<button id="decline-cookies">Refuser</button>
+			</div>
+
 		</main>
 		<!-- Footer -->
 		<footer class=''>
