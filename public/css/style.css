@@ -1001,6 +1001,9 @@ p {
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.3));
 }
 
+.hero {
+  height: 100vh;
+}
 .hero .rect-hero {
   position: absolute;
   z-index: -10;
@@ -1030,14 +1033,14 @@ p {
   width: clamp(100px, 25vw, 250px);
   height: auto;
 }
-.hero svg {
+.hero .image-container svg {
   width: fit-content;
   height: auto;
   max-width: 1000px;
   display: block;
 }
 @media screen and (max-width: 768px) {
-  .hero svg {
+  .hero .image-container svg {
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -1045,9 +1048,14 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
-  .hero {
+  .hero .image-container {
     flex-wrap: wrap;
     margin-top: 25%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero {
+    height: auto;
   }
 }
 
@@ -1058,6 +1066,9 @@ p {
 @media screen and (max-width: 768px) {
   .scroll {
     margin-top: 15%;
+  }
+  .scroll svg {
+    width: 100px;
   }
 }
 .scroll svg {
@@ -1251,21 +1262,6 @@ p {
   }
 }
 
-.container-dev svg,
-.container-assist svg {
-  width: fit-content;
-  height: auto;
-  max-width: 1000px;
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .container-dev svg,
-  .container-assist svg {
-    min-width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .container-dev .techno-logo i,
 .container-assist .techno-logo i {
   width: 80px;
@@ -1310,6 +1306,7 @@ p {
   .container-dev .site-vitrine-card-mobile,
   .container-assist .site-vitrine-card-mobile {
     flex-direction: column-reverse;
+    align-items: center;
   }
 }
 

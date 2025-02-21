@@ -59,9 +59,10 @@ h5 {
   font-size: calc($font-size-fluid * 1.1);
   text-align: left;
   font-weight: 900;
+
   @media screen and (max-width: $tablet) {
     font-size: calc($font-size-fluid * 0.9);
-    
+
   }
 }
 
@@ -80,6 +81,8 @@ p {
 }
 
 .hero {
+  height: 100vh;
+
   .rect-hero {
     @include rect($blue-desk);
   }
@@ -89,24 +92,32 @@ p {
     width: clamp(100px, 25vw, 250px);
     height: auto;
   }
+.image-container{
 
   @include svgLogo();
 }
 
+  @media screen and (max-width: $laptop) {
+    height: auto;
+  }
+}
 .scroll {
   text-align: center;
   margin-top: 3%;
 
   @media screen and (max-width: $tablet) {
     margin-top: 15%;
+    svg{
+      width: 100px;
+    }
   }
-
 
   svg {
     margin-left: auto;
     margin-right: auto;
   }
 }
+
 
 /*** Nous choisir ***/
 .why-choose-us {
@@ -254,19 +265,6 @@ p {
 
 .container-dev,
 .container-assist {
-  svg {
-    width: fit-content;
-    height: auto;
-    max-width: 1000px;
-    display: block;
-
-    @media screen and (max-width: $tablet) {
-      min-width: 350px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-  }
 
   .techno-logo {
     i {
@@ -313,6 +311,7 @@ p {
 
     .site-vitrine-card-mobile {
       flex-direction: column-reverse;
+      align-items: center;
     }
   }
 }
@@ -461,7 +460,21 @@ p {
     }
   }
 }
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 
+#cookie-banner button {
+  margin: 5px;
+  padding: 5px 10px;
+}
 .mentions-legales {
   padding: 0 5px;
 

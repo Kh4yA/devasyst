@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
+		<!-- Google Tag Manager -->
+		<script type='module' src='/js/home.js'></script>
 		<meta
 		charset="UTF-8">
 		<!-- SEO -->
@@ -14,7 +16,7 @@
 		<meta property="og:locale" content="fr_FR"> {% block meta %}{% endblock %}
 		<!-- Import des styles -->
 		{% block stylesheets %}
-			<link rel="stylesheet" href="/css/style.min.css">
+			<link rel="stylesheet" href="/css/style.css">
 		{% endblock %}
 		<!-- import fichier javascript -->
 		<script type='module' src="/js/app.js"></script>
@@ -43,6 +45,20 @@
 		</title>
 	</head>
 	<body>
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+w[l] = w[l] || [];
+w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s),
+dl = l != 'dataLayer' ? '&l=' + l : '';
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-KPLKC2D6');
+		</script>
+		<!-- End Google Tag Manager -->
 		<!-- Header -->
 		<header id='header'>
 			<div class=' flex space-between'>
